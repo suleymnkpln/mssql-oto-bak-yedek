@@ -4,7 +4,7 @@ setlocal enabledelayedexpansion
 :: Mouse tıklamasını engelle (QuickEdit kapat)
 reg add "HKCU\Console" /v QuickEdit /t REG_DWORD /d 0 /f >nul 2>&1
 
-title MSSQL Otomatik Yedekleme - CALISIYOR
+title TIGERMAN - MSSQL Otomatik Yedekleme - CALISIYOR
 color 0A
 
 :: =============================================
@@ -17,15 +17,26 @@ set BeklemeSaniye=5
 if not exist "%HedefKlasor%" mkdir "%HedefKlasor%"
 
 cls
-echo ============================================================
-echo       MSSQL OTOMATIK YEDEKLEME SISTEMI - AKTIF
-echo   Format: 2025-06-10_14-30-05.zip
-echo ============================================================
-echo  Sunucu  : %Sunucu%
-echo  Hedef   : %HedefKlasor%
-echo  Aralik  : Her %BeklemeSaniye% saniyede bir
-echo  Cikis   : CTRL+C
-echo ============================================================
+echo.
+echo  ╔══════════════════════════════════════════════════════════════════════╗
+echo  ║                                                                      ║
+echo  ║   ████████╗██╗ ██████╗ ███████╗██████╗ ███╗   ███╗ █████╗ ███╗   ██╗  ║
+echo  ║   ╚══██╔══╝██║██╔════╝ ██╔════╝██╔══██╗████╗ ████║██╔══██╗████╗  ██║  ║
+echo  ║      ██║   ██║██║  ███╗█████╗  ██████╔╝██╔████╔██║███████║██╔██╗ ██║  ║
+echo  ║      ██║   ██║██║   ██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║██║╚██╗██║  ║
+echo  ║      ██║   ██║╚██████╔╝███████╗██║  ██║██║ ╚═╝ ██║██║  ██║██║ ╚████║  ║
+echo  ║      ╚═╝   ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝  ║
+echo  ║                                                                      ║
+echo  ║              MSSQL OTOMATIK YEDEKLEME SISTEMI                        ║
+echo  ║                                                            ║
+echo  ╠════════════════════════════════════════════════════════════╣
+echo  ║  Durum   : AKTIF                                           ║
+echo  ║  Sunucu  : %Sunucu%
+echo  ║  Hedef   : %HedefKlasor%
+echo  ║  Aralik  : Her %BeklemeSaniye% saniyede bir
+echo  ║  Format  : yyyy-MM-dd_HH-mm-ss.zip                        ║
+echo  ║  Cikis   : CTRL+C                                         ║
+echo  ╚════════════════════════════════════════════════════════════╝
 echo.
 
 :: =============================================
