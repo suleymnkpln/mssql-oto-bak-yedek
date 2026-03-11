@@ -1,0 +1,16 @@
+# Yedekleme dosyalari
+*.bak
+*.zip
+
+# Gecici dosyalar
+*.tmp
+*.log
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# VS Code
+.vscode/
