@@ -23,6 +23,7 @@
 | **sqlcmd** | SQL Server komut satırı aracı (SQL Server ile birlikte gelir) |
 | **PowerShell** | 5.0+ (ZIP arşivleme ve tarih formatı için) |
 | **Yetki** | Windows Authentication ile SQL Server'a erişim |
+| **Yönetici** | Script **Yönetici (Administrator)** olarak çalıştırılmalıdır |
 
 ## Kurulum ve Kullanım
 
@@ -46,7 +47,9 @@ set BeklemeSaniye=3600             &:: Yedekleme aralığı (saniye cinsinden)
 
 ### 2. Çalıştır
 
-Dosyaya çift tıklayın veya komut satırından çalıştırın:
+> **ÖNEMLİ:** Script **Yönetici (Administrator)** olarak çalıştırılmalıdır. Registry ayarlarına erişim ve SQL Server yedekleme işlemleri için yönetici yetkisi gereklidir.
+
+Dosyaya **sağ tıklayıp → "Yönetici olarak çalıştır"** seçeneğini kullanın veya yönetici olarak açılmış komut satırından çalıştırın:
 
 ```cmd
 MSSQL_OtomatikYedek.bat
