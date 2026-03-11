@@ -8,11 +8,11 @@ title TIGERMAN - MSSQL Otomatik Yedekleme - CALISIYOR
 color 0A
 
 :: =============================================
-:: AYARLAR
+:: AYARLAR (Kendi ortaminiza gore duzenleyin)
 :: =============================================
-set Sunucu=
-set HedefKlasor=D:\testDEEE
-set BeklemeSaniye=5
+set Sunucu=localhost\SQLEXPRESS   &:: Ornek: localhost, localhost\SQLEXPRESS, 192.168.1.100\SQLEXPRESS
+set HedefKlasor=D:\SQL_Yedekler   &:: Ornek: D:\SQL_Yedekler, C:\Backup\MSSQL
+set BeklemeSaniye=3600             &:: Ornek: 3600 = 1 saat, 7200 = 2 saat, 86400 = 24 saat
 
 if not exist "%HedefKlasor%" mkdir "%HedefKlasor%"
 
